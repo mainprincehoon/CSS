@@ -1,0 +1,13 @@
+3 types ki CSS hoti hai (internal, external and inline)
+internal me CSS element html code ke head me hota hai
+inline me html code ke saath hi integrated hota hai(this method is not recommended as it makes it messy and complicated)
+external me 1 seperate CSS file me code karte hai baad me link kar dete hai usko bass html page se (best way)
+
+PRIORITY:-
+1st inline
+then jo niche hai dono me se wo override kar dega doosre waale ko
+
+
+url('../CSS/images/favicon.ico'); this is how to insert an image if it's not in the current file
+
+koi symbol character ya emoji (symbl)(https://symbl.cc) iss website se jaakar nikaal sakte hai jo uss symbol ka css,html sabka code de dega

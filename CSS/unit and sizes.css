@@ -1,0 +1,25 @@
+/* main {
+    width: 50%;
+} */
+
+h1 {
+    border: 2px dashed red;
+    width: 50%;   /* % is relative  50% of 50% is 25%*/
+    padding: 0.5em; /* em= font size of parent AND rem= font size of the root */
+}
+
+main {
+    min-height: 100vh;   /* viewport height more on chatGPT */
+}
+
+main {
+    font-size: 2rem;  /* 1rem=16px */
+}
+
+p {
+    font-size: 2rem;  /* but this is not relative meaning font will stay at 2rem and will not increase to 4rem */
+} 
+
+p {
+    width: 40ch;  /* 40 character ke baad next line. line end */
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Manufacturing+Consent&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONT */
+    --FONTFAMILY: "M PLUS Rounded 1c", sans-serif;
+    --FONTSIZE: 1.5rem;
+    --FONTSIZE-XL: 3rem;
+
+    /* COLOUR */
+    --BGCOLOR: #475569;
+    --BGCOLOR2: #1E293B;
+    --RADIALCOLOR: whitesmoke;
+    --LIGHTCOLOR: whitesmoke; /* same color can be used */
+    --DARKCOLOR: black;
+
+    /* SQUARE */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+    /* GENERAL */
+    --PADDING: 0.5rem; 
+    --SHADOWS: 0 15px 5px -5px var(--DARKCOLOR);
+    --BORDERS:  2px solid var(--DARKCOLOR);
+}
+
+/* SETTING FOR DARK THEME */
+@media (prefers-color-scheme : dark) {
+:root {
+    --BGCOLOR: black;
+    --BGCOLOR2: rgb(0, 0, 0);
+    --RADIALCOLOR: rgb(79, 78, 78);
+    --SQUARE-BGCOLOR: rgb(124, 123, 123);
+    }    
+}
+
+/* || GENERAL STYLES */
+body {
+    font: var(--FONTSIZE) var(--FONTFAMILY) ;
+    min-height: 100vh;
+
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--RADIALCOLOR) , var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer {
+    position: sticky;
+    color: var(--LIGHTCOLOR);
+    background-color: var(--BGCOLOR2);
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: var(--LIGHTCOLOR);
+    color: var(--DARKCOLOR);
+    padding: var(--PADDING);
+    border-bottom: var(--BORDERS);
+    box-shadow: var(--SHADOWS);
+}
+
+main {
+    flex-grow: 1;
+
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: min(4vw, 15px);
+}
+
+footer {
+    bottom: 0;
+}
+
+/* || FEATURES */
+
+.square--highlight {
+--SQUARE-BGCOLOR: cornflowerblue; /* we overrided this attribute fot this class(.square--highligh), meaning iss class ke andar use hoga to yahi color use hoga, iss class ke baahar jo baahar set kiya hai wo use hoga */
+}
+
+.square {
+background-color: var(--SQUARE-BGCOLOR);
+width: var(--SQUARE-SIZE);
+height: var(--SQUARE-SIZE);
+border: var( --BORDERS) ;
+border-radius: 15px;
+display: grid;
+place-content: center;
+font-size: var(--FS-XL);
+box-shadow: var(--SHADOWS);
+}

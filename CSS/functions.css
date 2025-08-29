@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Manufacturing+Consent&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || FUNCTIONS */
+:root {
+    --FONTSIZEMIN: min(2.25rem, 3vh); /* The min() function is typically used with one absolute value (like rem or px) and one relative value (like vh) so it can adapt; using two absolute values just results in the smaller one being chosen. */
+    --FONTSIZEMAX: max(1.75rem, 3vh);
+    --FONTSIZECLAMP: clamp(1.75rem, 3vh, 2.25rem);
+    --FONTMINMAX: minmax(100px,300px);  /* this fxn is only used in grids */
+}
+
+/* || VARIABLES */
+:root {
+    /* FONT */
+    --FONTFAMILY: "M PLUS Rounded 1c", sans-serif;
+    --FONTSIZE: 1.5rem;
+    --FONTSIZE-XL: 3rem;
+
+    /* COLOUR */
+    --BGCOLOR: #475569;
+    --BGCOLOR2: #1E293B;
+    --RADIALCOLOR: whitesmoke;
+    --LIGHTCOLOR: whitesmoke; /* same color can be used */
+    --DARKCOLOR: black;
+
+    /* SQUARE */
+    --SQUARE-BGCOLOR: papayawhip;
+    --SQUARE-SIZE: max(150px, 20vw);
+
+    /* GENERAL */
+    --PADDING: 0.5em; 
+    --SHADOWS: 0 15px 5px -5px var(--DARKCOLOR);
+    --BORDERS:  2px solid var(--DARKCOLOR);
+}
+
+
+/* first concept */
+body {
+    font: var(--FONTSIZECLAMP) var(--FONTFAMILY) ;
+    min-height: 100vh;
+
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--RADIALCOLOR) , var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer {
+    position: sticky;
+    color: var(--LIGHTCOLOR);
+    background-color: var(--BGCOLOR2);
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: var(--LIGHTCOLOR);
+    color: var(--DARKCOLOR);
+    border-bottom: var(--BORDERS);
+    box-shadow: var(--SHADOWS);
+}
+
+main {
+    flex-grow: 1;
+    padding: var(--PADDING);
+
+
+    /* second concept */
+    /* display: grid;   
+    grid-template-columns: repeat(4, minmax(100px, 300px));
+    gap: min(2vw, 20px); */
+
+
+    /* first concept */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+main section {
+  flex-grow: 1;
+  padding: var(--PADDING);
+}
+
+main aside {
+  background-color: hsla(0, 0%, 20%, 0.8);
+  color: var(--LIGHTCOLOR);
+  font-size: var(--FONTSIZE);
+  font-style: italic;
+  padding: var(--PADDING);
+}
+
+.tooltip {
+  border-bottom: 1px dashed orange;
+  position: relative;
+}
+
+.tooltip:hover {
+    color: antiquewhite;
+}
+
+.tooltip:hover::before { /* stacking a pseudo element (complicated to explain if forget go to 7:40:00 in the lecture or try figuring out by removing 1 element and seeing the difference) */
+  content: attr(data-tooltip);  /* attribute fxn */
+  position: absolute;
+  top: -55px;
+  white-space: nowrap;
+  background-color: var(--DARKCOLOR);
+  padding: var(--PADDING);
+  border-radius: 15px;
+}
+
+/* GOOGLE LINK STYLING */
+a:any-link {
+    color: firebrick;
+}
+
+a:hover, a:focus {
+    filter: brightness(150%); /* hue-rotate(180deg) and many more */
+}
+
+footer {
+    bottom: 0;
+}
+
+@media screen and (min-width: 576px) {
+    main {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    }
+
+    main section {
+    width: calc(70% - 5px);
+    }
+
+    main aside {
+    width: calc(30% - 5px);
+    }
+}
+
+
+
+.square--highlight {
+--SQUARE-BGCOLOR: cornflowerblue; 
+}
+
+.square {
+background-color: var(--SQUARE-BGCOLOR);
+/* width: var(--SQUARE-SIZE);
+height: var(--SQUARE-SIZE); */
+border: var( --BORDERS) ;
+border-radius: 15px;
+display: grid;
+place-content: center;
+font-size: var(--FONTSIZE-XL);
+box-shadow: var(--SHADOWS);
+}
+

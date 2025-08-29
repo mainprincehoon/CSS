@@ -1,0 +1,14 @@
+/* more info on colors on my introduction.css */
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: papayawhip;
+    color: red;
+    /* color: rgba(255, 0, 0, alpha);   alpha is for transparency (0-1)*/
+    /* color: hsl(hue, saturation, lightness);   similar to rgb */
+}
+
+p {
+
+}

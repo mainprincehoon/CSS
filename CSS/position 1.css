@@ -1,0 +1,72 @@
+/* too hard to explain in comments if you forget do chatgpt or go to the freecodecamp lecture (https://youtu.be/OXGznpKZ_sA?si=nzU3OtS4TmsL7UeR&t=12871) */
+
+/* relative:Stays in place, but you can shift it a bit. (it will always be relative to parent container unlike absolute where we have to define it)
+absolute:Breaks out, you can place it anywhere. (The element is removed from the normal page flow. 
+            You can place it anywhere on the page (based on its nearest parent that is positioned).
+            🧠 Think of it like this:
+            You take a photo frame off the wall and hang it wherever you want, even over other things.)
+fixed:	Always stays in same spot on screen (even when scrolling).
+sticky:	Moves normally, but then sticks during scroll. It acts normal at first, but when you scroll past it, it sticks to a spot (like the top). */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed black;
+    width: 75vh;
+    height: 85vh;
+    margin: 40px auto; 
+    position: relative; /* issey wo absolute waala dabba iss container ke hisaab se badlega page ke hisaab se nai */
+} 
+
+.inner-container {
+    border: 2px solid purple ;
+    width: 40vh;
+    height: 50vh;
+    margin: 200px auto;
+    position: relative; /* same as above but this one will override the above one */
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+}
+
+.absolute {
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    /* left: -10000px; ye karne se page me nahi dikhega lekin code me rahega */
+    z-index: 1; /* ab scroll karne par absolute waala dabba top pe rahega instead of fixed */
+}
+
+.relative {
+    background-color: red;
+    position: relative;
+    top: 300px;
+    left: 100px;
+}
+
+.fixed {
+    background-color: green;  
+    position: fixed;
+    top: 100px; /* top se 100px pe hi rahega kitna bhi scroll karlo */
+}
+
+.sticky {
+    background-color: aquamarine;
+    position: sticky;
+    top: 100px;  /* container se itne pixel niche hi wo chipka rahega bhale hi ham scroll until container 
+                   hai page me agar container hi poora scroll kar diya to ye container ke saath scroll hoo jaayega */
+}

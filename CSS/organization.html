@@ -1,0 +1,34 @@
+<!-- When naming classes in HTML/CSS, we usually use simple names like header -button. 
+ However, when we want to add a modifier to a class, we use two hyphens (e.g., button--border) instead of one,
+  to clearly indicate that it is a modifier. This helps other developers understand the structure more easily.
+   Apart from modifiers, we can also create elements within a block using two underscores, like header__button,
+    where button is a part of the header block. This follows the BEM (Block Element Modifier) naming convention. 
+    We can also apply multiple modifiers to a single class by adding them with spaces. In this case, 
+    I've used header-button because the button is inside a block whose class is named header,
+     so calling it header-button makes it clear and organized. If someone else looks at the code,
+      they'll immediately understand that the button belongs to the header section. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Naming Convention</title>
+    <link rel="stylesheet" href="organization.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">BEM</h1>
+        <nav class="header__nav">
+            <button class="header__btn">🚀</button>
+            <button class="header__btn header__btn--secondary">🔥</button>
+            <button class="header__btn header__btn--lean header__btn--border-lg header__btn--secondary">🌮</button>
+        </nav>
+    </header>
+</body>
+
+</html>

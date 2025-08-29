@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Manufacturing+Consent&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Syntax:
+@media media type and (condition: breakpoint) {
+    CSS rules
+} */
+
+/* @media screen and ( min-width: 481px ) { /* (min-aspect-ratio: 7/4) and (orientation: landscape) (max-width: 481px) these are all that can be used*/ /*
+
+} */
+
+
+/* || GENERAL STYLES */
+body {
+    font: 1.5rem  "M PLUS Rounded 1c", sans-serif; /* font short hand */
+    min-height: 100vh;
+
+    background-color: grey;
+    background-image: radial-gradient(whitesmoke, grey);
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, main, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer {
+    position: sticky;
+    color: whitesmoke;
+    background-color: rgb(6, 6, 66);
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    bottom: 0;
+}
+
+/* || SMALL */
+@media screen and (min-width: 576px) { /* 576px se kam hoga page ya screen to upar waala style show hoga agar ussey bada hua to ye waala usko override kar dega */
+    body {
+        background-color: green;
+        background-image: radial-gradient(whitesmoke, green);
+    }
+    nav {
+        display: none;
+    }
+}
+
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke, gold);
+    }
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+    body {
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke, firebrick);
+    }
+}
+
+/* || XL */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple);
+    }
+}
+
+/* || MOBILE DEVICE LANDSCAPE */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    body {
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue);
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    nav {display: none;}
+}
+

@@ -1,0 +1,82 @@
+/* study  justify-content, align-items, and align-content these three first if you've forgotten everything and is overwhelmed right now */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    border: 1px solid black;
+    margin-inline: auto;
+    max-width: 800px;
+    min-height: 400px;
+
+    /* making container flex */
+    display: flex;
+    gap: 1rem;
+    justify-content: center; /* there are many options to choose from (horizontal change hoga issey) */
+    align-items: center; /* the other axis (vertical change) */
+    /* flex direction is set to row by default, we can change it to columns but then the justify-content would change vertical and align-items would change horizontal data*/
+    flex-direction: column; /* column-reverse etc */
+
+
+   /* flex-direction: row-reverse;  this can also be done 
+    flex-wrap: wrap;  wraps around the boxes when we are shrinking the tab */
+              /* OR */
+    flex-flow: row nowrap;  /* wrap-reverse is also possible */
+
+    align-content: space-evenly ; /* this aligns the rows like justify-content */
+}
+
+.box {
+    font-size: 2rem;
+    padding: 0.5rem;
+   height: 100px; 
+   /* min-width: 100px; */
+   background-color: black;
+   color: white;
+
+   /* similarly we can also make the items flex */
+   display: flex;
+   justify-content: center;  /* this can be used to center anything in a container or a element in a body (This can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.)*/
+   /* (IMP) similarly align-content also exists (it determines the spacing vertically) */
+   align-items: center;
+
+  /* flex-grow: 1;
+   flex-basis: 100px; */  /* ye min-width: 100px; iska kaam karega*/
+
+   /* flex-shrink: 1;
+   flex-basis: 250px; */
+
+   flex: 1 1 250px;  /* all of that(grow, shrink, basis) can be put on 1 line */
+
+}
+
+/* .box:nth-child(2) {
+    flex-grow: 2;   extra space me 1 jitna jagah lega 2 ussey zyda jagah lega 
+}  */
+
+/* .box:nth-child(2) {  
+    flex-shrink: 2;   similar to flex-grow but ye shrink karne par use hoga 
+} */
+
+.box:nth-child(2) {
+    flex: 3 2 250px; /* 3 times grow and 2 times shrink */
+
+    order: 1;   /* 2 last me chala gaya -1 diya to 1st me aa jaayega 
+                  or agar 1 se zyda row hai to 2 jis row me hai uske 1st ya last me jaayega ye property use karne par 
+                   eakdam 1st ya eakdam last me nahi*/
+
+}
+
+.box:nth-child(3) {
+align-self: flex-end;       /* Another property you can apply to individual items is align-self. 
+                          This property accepts the same values as align-items and its value for the specific item. */
+}    

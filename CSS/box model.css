@@ -1,0 +1,44 @@
+* {  /* manually setting margin,border and padding */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* IMP:- border box me border+padding+content= 3rem
+                                 but content-box me sirf content ka 3rem space lega */
+}
+
+.container {
+    /* border: 2px dashed red;  */
+        /*OR*/
+    border-left: 3px dashed green;
+    border-right: 4px solid green;         /* ye padding and margin me bhi kar sakte */
+    border-top: 10px dashed lightblue;
+    border-bottom: 7px ridge ;
+
+    /* font-size: 3rem;  font size will also change the margin and padding unless set manually or resetted */
+    
+    font-size: 1.5rem;
+        
+
+    /* padding: 1.5rem; */
+         /* OR */
+    padding: 2rem 4rem; /* top & bottom 2 rem and left and right 4rem padding */
+
+
+    margin: 1.5rem;
+        /* OR */
+    margin: 1rem 2rem 3rem 4rem; /* 1->up then right,bottom and left accordingly */
+     
+    outline: 5px solid paleturquoise;
+    outline-offset: -20px;
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        margin: 3rem auto;  /* aut se sirf left and ight me centre ka deta hai p and bottom me hamne 3 rem diya hai */
+        border: 3px solid;
+        outline: 2px solid silver;
+        border-radius: 50px; /* 40px would be oval */
+
+    }
+
+}   

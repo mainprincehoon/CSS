@@ -1,0 +1,48 @@
+/* 
+Inline vs Block Elements in CSS:
+
+CSS properties like margin and height only work on block elements(but we can apply these properties to inline by converting it to block),
+not inline ones. However, padding can be applied to inline elements,
+but doing so on a single inline element in a sentence can cause overlap.
+To avoid this, we can use the display property to convert inline elements into block elements (and vice versa).
+This allows us to control layout more precisely. For example, block-to-inline is often used with links in styling. 
+*/
+
+body {
+    font-size: 2rem;
+}
+
+p {
+    background-color: lightgray;
+}
+
+.opposite {
+    display: inline-block;  /* isko remove karke try karo samajh jaaoge padding me difference */
+    background-color: black;
+    color: whitesmoke;
+    padding: 4rem;
+    margin-top: 100px;
+    height: 200px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0.5rem;
+    text-align: right;
+    background-color: black;
+}
+
+li {
+    display: inline-block; /* 1 line me aa gayi links */
+    margin-inline: 1rem; /* links ke beech me gap */
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover, li a:focus {
+    color: cyan;
+    text-decoration: underline;
+}

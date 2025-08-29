@@ -1,0 +1,45 @@
+/* # id selector me use hoga and . class selector mein*/
+/*ye element selector hai isme kuch change kiya to sabme hoga*/
+/* class selector will override the element selector */
+
+body{      /*element selector hai ye (h, body etc)*/
+    /* margin: 0; */   /* ye karne se 1 halka sa left me gap rehta hai wo chala jaayega */ 
+    /* padding: 0;  */
+    background-color: lightblue;
+    /*color: white;   (instead of ye karne ke) */
+    color: var(--yewalacolor);   /*ye kar sakte hai*/   
+}
+
+#myname{   
+    display: block;   /* span inline element hota hai lekin usko block element me convert kar sakte hai aise */
+    color: var(--gold);
+    font-size: 30px;
+}
+
+#liststyling {
+    /* margin: 0;
+    padding: 0; */     /* ye bhi wahi karega */
+
+}
+
+.liststyle {
+    list-style-type: square;  /*numbering bhi kar sakte hai lower alpha daalke*/
+    /*list-style-image: url("favicon.ico");   */    /*issey koi custom image bhi daal sakte hai points ki jagah*/
+}
+
+h1,h2,h3 {   /* issey multiple headings me change kar sakte */
+    color: cyan ;
+}
+
+h1 h2 {   /* ye nested system hai meaning ye ye h2 me change karega h1 ke andar waale (h1 ke andar hoha chahiye h2) */
+    color: black; 
+}
+
+h1 span {   /* similarly ye h1 ke andar jitne bhi span hai unme change karega but iski jagah class use karna would make more sense  */
+    color: black; 
+}
+
+* {  /*universal selector sabme change kar dega*/
+/* border: 3px solid red;  (ye karne par har line me baksa banega) */
+}
+

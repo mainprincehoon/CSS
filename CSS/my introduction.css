@@ -1,0 +1,33 @@
+:root {
+    --yewalacolor: #25ff37;    /*ye waala colour iss dabbe me daal diya to baar baar colour nahi likhna padega*/
+    --cobalt: #033649;
+    --turquoise: #066464;
+    --beige: #ceb280;
+    --gold: #eaddcc
+}
+
+
+body{
+    /* margin: 0; */   /* ye karne se 1 halka sa left me gap rehta hai wo chala jaayega */ 
+    /* padding: 0;  */
+    background-color: darkblue;
+    /*color: white;   (instead of ye karne ke) */
+    color: var(--yewalacolor);   /*ye kar sakte hai*/   
+}
+
+#myname{   
+    display: block;   /* span inline element hota hai lekin usko block element me convert kar sakte hai aise */
+    color: var(--gold);
+    font-size: 30px;
+}
+
+#liststyling {
+    /* margin: 0;
+    padding: 0; */     /*  ye bhi wahi karega*/
+
+}
+
+.liststyle {
+     list-style-type: square; /* numbering bhi kar sakte hai lower alpha daalke */
+   /* list-style-image: url("favicon.ico");  8/     /*issey koi custom image bhi daal sakte hai points ki jagah*/
+}

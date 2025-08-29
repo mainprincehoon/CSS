@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0.5rem;
+    text-align: center;
+    font-family: "Playwrite VN Guides", sans-serif;
+}
+
+nav {
+    border: 2px solid black;
+    border-radius: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    line-height: 7rem;
+}
+
+h2 {
+    padding: 1rem;
+    background-color: gold;
+    border-radius: 2rem 2rem 0 0;
+}
+
+ul {
+    /* list-style-position: inside; */ /* example samajhna hai to isko use karke dekhlo */
+    list-style-type: none;
+}
+
+li {
+    border-top: 1px solid black;
+}
+
+li a {
+    display: block;    /* ye nahi hoga  to sirf text select hoga iske saath poore block par click kar sakte hain */
+    color: black;
+}
+
+li a, li a:visited {   /* li a ke andar li a visited me change hoga issey */
+    text-decoration: none;
+    color: gray;
+}
+
+li a:hover, li a:focus-visible { 
+    background-color: gainsboro;
+    color: black;
+    cursor:grab;
+}
+
+li a:active { 
+    color: goldenrod;
+}
+
+li:last-child a {
+    border-radius: 0 0 2rem 2rem;  /* issey last waale box me bhi curve aayega hover karte time */
+}
+
+p {
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+p a:hover {
+    color: aqua;
+}

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Manufacturing+Consent&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* start reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {display: block;} 
+                 /* by default img is inline; this makes it block to remove extra space from below and allow full-width styling */
+/* end reset */
+
+/* utility classes */
+
+.nowrap {
+    white-space: nowrap; /* ab page shrink hone par no wrap waale part split nahi honge */
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+/* end of utility classes */
+
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    min-height: 100vh;
+
+    /* 3rd example */
+    background-color: aliceblue;
+    background-image: url(images/transparent\ bubbles.png), linear-gradient(to right, steelblue, cyan , purple); /* default is top to bottom we changed it here to left to right */
+    background-repeat: repeat-y, no-repeat;
+    background-position: left center;
+
+    /* we can use a shorthand for background-image, repeat and position */
+    /* background: repeat-y left center url(images/transparent\ bubbles.png), no-repeat linear-gradient(to right, steelblue, cyan , purple); values for 1st image, values for 2nd image (too complicated for me)*/
+
+    background-size: 20%, auto;
+}
+
+/* 1st example */
+/* .example {
+    margin-top: 20px;
+    padding-left: 20px;
+    border: 2px solid red;
+} */
+
+
+/* 2nd example */
+.container {
+    background-color: burlywood; /* incase image fails to load */
+
+    /* background-image: url(images/background\ img.jpg);
+    background-repeat: repeat-y; */
+
+    background-image: url(images/big\ background\ img.jpg);
+    background-repeat: no-repeat;
+    background-position: center center; /* X-axis, Y-axis (top right, bottom right all are possible) */
+    background-size: cover;
+}
+
+.hero {
+    border-bottom: 2px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: hsla(0, 0%, 100%, 0.399);  /* remove this and see the difference blackish hat jaayega background se */
+}
+
+.h1 {
+    font-size: 500%;
+    color: rgb(188, 115, 219);
+    text-shadow: 2px 2px 5px black; /* X-axis, Y-axis, mur value(how much we want shadow to appear), colour */
+
+    /* background-color: hsla(0, 0%, 50%, 0.403);
+    border-radius: 20px;  this is used to give backgroung color to text
+    padding: 0.25rem; */
+
+
+}
+
+.example img {
+    width: 25%;
+    height: auto;
+}
+
+.profilepic {
+    width: 35%;
+}
+
+.profilepic img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double grey;
+    border-radius: 50%;
+}
+
+/* 4th example */
+.clip {
+    font-weight: 800;
+    font-size: 20rem;
+    text-align: center;
+    background-image: url(images/big\ background\ img.jpg);
+    background-size: 100%;
+    text-transform: uppercase;
+
+    -webkit-background-clip: text; /* remove karo difference samajh aa jaayega */
+    background-clip: text; /* sirf upar waale se har browser me nahi hoga kuch browser support nahi karenge isliye ye 
+                                    line har baar include karni padegi to make it compatable with every browser*/
+
+    color: hsla(0, 0%, 0%, 0.267); /* or we can simply use transparent */
+}
+

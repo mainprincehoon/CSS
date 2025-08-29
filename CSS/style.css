@@ -1,0 +1,45 @@
+/* index and index2 dono ka css yaha hai*/
+
+h3 {  /* # nahi lagaana pada kyuki ye inbuilt fxn hai*/  
+    color: red;                    
+    background-color: cyan;
+}
+
+#idselector {                            /*id selector*/    /*id unique hoti hai*/
+    background-color: rgba(26, 6, 248, 0.5);       /*rgb element*/    
+    color: rgb(9, 235, 239);            /*last element is for transparency*/
+}
+
+.classelector {                     /*class selector*/
+    color: aqua;
+    background-color: yellow;
+}
+
+* {                              /*jitne elements hai sabme apply hoga*/
+    letter-spacing: 10px;
+}
+
+#imagediv {                    /*id selector*/
+    color: white;
+    background-image: url("../CSS/images/image.jpeg");
+    background-attachment: fixed;    /* fixed ki jagah scroll karne se photo bhi saath me hilegi webpage ke saath*/
+    background-repeat: repeat;
+}
+
+#textdecoration {
+    text-decoration: underline yellow wavy 20px;  /* linethrough or overline bhi hota hai*/
+}
+
+#heading {
+    text-decoration: underline;
+    text-transform: uppercase;  /* capitalize me word ka 1st letter bada hoga bass*/
+    letter-spacing: 5px;
+    word-spacing: 20px;
+    line-height: 90px;
+    text-align: center;
+}
+
+span {
+  /*  vertical-align: super;  */   /* upar chala gaya thora sa*/
+    vertical-align: text-top;   /*niche chala gaya CSS*/ 
+}

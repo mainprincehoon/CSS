@@ -1,0 +1,37 @@
+a {
+    /* text-decoration:line-through; */
+    cursor:grab ;
+    color: hsl(5, 86%, 62%);
+}
+
+a:visited {  /*  ye waale sab same weight hold karte hai jo 
+                          baad me likhaayega override kar dega but 1st waala baaki sabse kam priority rakhta hai 
+                          meaning bhale hi ye upar ho plain a ko override kar denge */
+    color: hsl(39, 87%, 57%);
+}
+
+a:hover {           /* even though they all have same weight this is the correct order if interchanged they may not work */
+    color: hsl(271, 76%, 53%, 0.8);
+    /* background:hsl(184, 100%, 50%); */
+}
+
+a:active {    /* bhool gaya to chatGPT */
+    color: rgb(0, 47, 255);
+}
+
+a:hover, a:focus { /* use focus-visible it will remove the change if it's not in focus instead of we manually clicking somewhere else to change it back */
+    filter: brightness(150%); /* hue-rotate(180deg) and many more */
+}
+
+/* 
+a {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red; /* optional */ /*
+}
+Or you can shorthand it all together:
+
+a {
+  text-decoration: underline wavy red;
+}
+*/

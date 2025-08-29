@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Macondo&family=Manufacturing+Consent&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federant&family=M+PLUS+Rounded+1c&family=Macondo&family=Manufacturing+Consent&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* || RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea {
+    font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --Fontfamily: "Macondo", cursive;
+    --Fontfamily-Headings: "Federant", serif;
+    --FONTFAMILY-h1: "Playwrite VN Guides", cursive;
+    --Font-size: clamp(1.1rem, 2.5vh, 1.5rem);
+
+    /* COLOUR */
+    --BGCOLOUR-FADE: hsl(39, 100%, 72%);
+    --BGCOLOUR: orange;
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOUR), var(--BGCOLOUR-FADE)); 
+    --BODY-BGCOLOUR: white;
+    --BORDER-COLOUR: rgb(47, 47, 47);
+    --FONT-COLOUR: black;
+    --HEADER-BGCOLOUR: black;
+    --HEADER-COLOUR: white;
+    --HERO-BGCOLOUR: rgba(51, 178, 51, 0.75);
+    --HERO-COLOUR: white;
+    --HIGHLIGHT-COLOUR: rgb(183, 231, 183);
+    --LINK-ACTIVE: aquamarine;
+    --LINK-COLOUR: rgb(199, 129, 0);
+    --LINK-HOVER: rgb(183, 231, 183);
+    --NAV-BGCOLOUR: white;
+
+    /* BORDERS*/
+    --BORDERS: 1px solid var(--BORDER-COLOUR);
+    --BORDER-RADIUS: 15px;
+
+    /* STANDARD PADDING */
+    --PADDING-TOPBOTTOM: 0.25em;
+    --PADDING-SIDE: 2.5%
+    --PADDING: 0 clamp(1em, 2.5vh, 1.5em);
+
+    /* STANDARD MARGIN */
+    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+    /* --MARGIN: 0 1em; */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        ---HEADER-COLOUR: whitesmoke;
+        --BGCOLOUR-FADE: grey;
+        --BGCOLOUR: black;
+        --BODY-BGCOLOUR: #333;
+        --BORDER-COLOUR: whitesmoke;
+        --FONT-COLOUR: whitesmoke;
+        --HERO-COLOUR: #333;
+        --HIGHLIGHT-COLOUR: whitesmoke;
+        --LINK-ACTIVE: rgb(255, 220, 156);
+        --LINK-COLOUR: whitesmoke;
+        --LINK-HOVER: orange;
+        --NAV-BGCOLOUR: rgb(20 ,20 ,20);
+    }
+}
+
+/* || UTILITY CLASSES */
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--Font-size);
+    font-family: var(--Fontfamily);
+    background-color: var(--BGCOLOUR);
+    background-image: var(--BGIMAGE);
+}
+
+body {
+    background-color: var(--BODY-BGCOLOUR);
+    color: var(--FONT-COLOUR);
+    min-height: 100vh;
+    width: 50rem; /* OR 800px */
+    margin: 0 auto;
+    border-left: var(--BORDERS);
+    border-right: var(--BORDERS);
+    box-shadow: 0 0 10px var(--BORDER-COLOUR);
+}
+
+h1 {
+    font-family: "Playwrite VN Guides", cursive;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-family: var(--Fontfamily-Headings);
+    letter-spacing: 0.1em;
+    text-decoration: underline wavy;
+}
+
+h2, h3 {
+    margin-bottom: 1em;
+    color: var(--HIGHLIGHT-COLOUR);
+}
+
+/* || HEADER */
+.header__h1 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--HEADER-BGCOLOUR);
+    color: var(--HEADER-COLOUR);
+    text-align: center;
+    text-decoration: underline;
+    padding: var(--PADDING-TOPBOTTOM);
+}
+
+.header__nav {
+    background-color: var(--NAV-BGCOLOUR);
+    border-bottom: var(--BORDERS);
+    font-weight: bold;
+    box-shadow: 0 6px 5px -5px var(--BORDER-COLOUR);
+}
+
+.header__ul {
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+/* || HERO */
+
+.hero {
+    position: relative;
+}
+
+.hero__h2 {
+    background-color: var(--HERO-BGCOLOUR);
+    color: var(--HERO-COLOUR);
+    padding: 0.25em 0.5em;
+    text-shadow: 2px 2px 5px var(--BORDER-COLOUR);
+    letter-spacing: 0.1rem;
+    position: absolute;
+    left: 20px;
+    top: -110px;
+    animation: showwelcome 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes showwelcome {
+    0% {
+        top:-20px;
+        transform: skew(0deg, -5deg) scale(0,0);
+    }
+
+    80% {
+        top: 30px;
+        transform: skew(10deg, -5deg) scale(1.2, 1.2);
+    }
+
+    100% {
+        top: 20px;
+        transform: skew(-10deg, -5deg) scale(1,1);
+    }
+}
+
+li a:any-link {
+    cursor: grab;
+    text-decoration: none;
+    color: var(--LINK-COLOUR);
+}
+
+li a:hover, li a:focus-visible {
+    text-decoration:underline;
+    color: var(--LINK-HOVER);
+}
+
+li a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+
+/* || FOOTER */
+
+.footer {
+    background-color: var(--HEADER-BGCOLOUR);
+    color: aliceblue;
+    padding: var(--PADDING-TOPBOTTOM) var(--PADDING-SIDE);
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+
+/* || MAIN */
+
+.main{
+    padding: var(--PADDING-TOPBOTTOM) var(--PADDING-SIDE);
+}
+
+.main__article {
+    scroll-margin-top: 6.5rem;
+    margin: var(--MARGIN);
+}
+
+.main:last-child {
+    min-height: calc(100vh - 20rem);
+}
+
+/* || ABOUT */
+.main__article {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+.about__trivia {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-bottom: 5rem;
+}
+
+.about__trivia-answer{
+    margin-top: 1em;
+    margin-bottom: 5rem;
+}
+
+/* || CONTACT */
+.contact__h2 {
+    margin: 0;
+}
+
+.contact__fieldset {
+    border: none;
+}
+
+.contact__p {
+    margin: 1em 0;
+}
+
+.contact__label  {
+    display: block;
+    font-weight: bold;
+}
+
+.contact__input, .contact__textarea {
+    padding: 0.5em;
+    border-radius: var(--BORDER-RADIUS);
+    border-width: 2px;
+    width: 100%;
+}
+
+.contact__button {
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: var(--LINK-HOVER);
+    /* color: var(--LINK-COLOUR); */
+}
+
+.main__article:first-child {
+    padding: 1em 0;
+}
+
+.backtotop {
+margin-top: 1em;
+margin-bottom: 2rem;
+}
+
+.backtotop a:hover, .backtotop a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+.backtotop a:active {
+    color: var(--LINK-ACTIVE)
+}
+
+
+/* || MENU */
+
+thead, tbody, tfoot, tr {
+    display: contents;
+}
+
+.menu__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+        "hd1 hd2 hd3"
+        "cr cr1 cr1p"
+        "cr cr2 cr2p"
+        "cr cr3 cr3p"
+        "sf sf1 sf1p"
+        "sf sf2 sf2p"
+        "sf sf3 sf3p"
+        "cs cs cs";
+        gap: 0.1em;
+        margin-bottom: 1em;
+}
+
+.menu__cr {
+    grid-area: cr;
+}
+.menu__soft {
+    grid-area: sf;
+}
+.menu__cs {
+    grid-area: cs;
+}
+
+.menu__cr, .menu__soft, .menu__cs, .menu__header {
+    color: var(--HIGHLIGHT-COLOUR);
+    font-weight: bold;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.menu__header, .menu__item {
+    width: 100%;
+    padding: 1em;
+    border: medium ridge var(--BORDER-COLOUR);
+}
+
+thead th:first-child {
+    border-top-left-radius: var(--BORDER-RADIUS);
+}
+
+thead th:last-child {
+    border-top-right-radius: var(--BORDER-RADIUS);
+}
+
+.menu__soft{
+    border-bottom-left-radius: var(--BORDER-RADIUS);
+}
+
+.menu__curve{
+    border-bottom-right-radius: var(--BORDER-RADIUS);
+}
+
+.menu__cs {
+    border-radius: var(--BORDER-RADIUS);
+}
+
+.menu__item {
+    display: grid;
+    place-content: center;
+}
+
+
+
+@media screen and (min-width: 576px) {
+    .header__h1::before {
+        content: '🌮 '
+    }
+
+    .header__h1::after {
+        content: ' 🌮'
+    }
+
+    .menu__header,
+    .menu__cr,
+    .menu__sf,
+    .menu__cs {
+        font-size: 125%;
+    }
+}

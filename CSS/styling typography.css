@@ -1,0 +1,22 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family:'Courier New', Courier, monospace;  /* font order if prevv not available */
+                     /* single quote required when the word has gap */
+                 /* this is default */
+                /* similarly we can add more fonts using google fonts */
+    
+}
+
+
+p {
+    text-decoration: overline; /* underline, line-through, none */
+    text-transform: capitalize; /* lowercase, uppercase */
+    text-align: left; /* justify, right */
+    text-indent: 2em;  /* starting me gap */
+    line-height: 1.5;  /* line ke btw me gap */
+    /* letter-spacing: ;
+    word-spacing: ; */
+    /* font font-weight: normal; */
+    /* font-style: italic; */
+}

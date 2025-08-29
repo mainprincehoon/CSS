@@ -1,0 +1,36 @@
+.columns {
+    /* column-count: 4;
+    column-width: 100px;
+         OR */
+    columns: 4 250px;
+    column-rule: 3px solid black;
+    column-gap: 3rem;
+}
+
+.columns p {
+    margin-top: 0;
+}
+
+.columns h2 {
+    margin-top: 0;
+    background-color: black;
+    color: whitesmoke;
+    padding: 1rem;
+    break-inside: avoid; /* toot ke 2 tukdo me bate ga nahi chota bada karte time */
+}
+
+.columns .quote { /* .quote won't work because it has less specificity than .columns
+                 Since .columns already has margin-top: 0, it will override .quote. 
+                 To apply the style correctly, use .columns .quote which increases specificity and ensures the style is applied. */
+
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: aliceblue;
+    background-color: gray;
+    column-span: all;  /* poore column ki jagah lega */
+}
+
+.nowrap {
+    white-space: nowrap;  /* issey  ∼ My stomach 1 line me hi aayega doesn't matter kitna chota ya bada karo */
+}

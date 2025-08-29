@@ -1,0 +1,42 @@
+ol {
+    /* list-style-type: lower-alpha;  */
+    list-style-type: none;
+    padding: 0%;
+}
+
+
+ul {
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside; /* points bhi centre me aa gaye (inside matlab padding ke andar 
+                                       jaayenge points outside matlab padding ke andar iska example samajhne ke liye CSS/mini project) */
+    line-height: 1.6;
+    list-style-image: url('../CSS/images/favicon.ico');
+
+    /* OR we can provide all attributes in 1*/
+
+    list-style: square url('../CSS/images/favicon.ico') inside; /* agar image load nahi hui to backup me square hai */
+}
+
+
+/* li { /* will apply to both ol and ul */
+    color: red; }
+ */
+
+
+ul li {
+    /* this will change only ul */
+}
+
+ul li:nth-child(even) { /* individually select kar sakte meaning if i put 3 in the place of even it will only select the 3rd row in he ul (li:last-child is also a way to select the last element)*/
+    color: red;
+}
+
+ul ::marker { /* it will apply to both markers(ul and ul) unless specified in this case */
+    color:green;
+font-family: fantasy;
+font-size: lem;
+content: "Only $5 >> ";
+}
+
+
