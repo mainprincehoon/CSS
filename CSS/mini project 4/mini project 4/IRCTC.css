@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Manufacturing+Consent&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Fontfamily: "M PLUS Rounded 1c", sans-serif;
+    --MARGINBODY: 1rem;
+    --PADDINGBODY: 2rem; 
+    --BORDERCOLOR: hsla(0, 0%, 50%, 0.4);
+}
+
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+html {
+    font-family: var(--Fontfamily);
+    font-size: small;
+}
+.hero-left {
+    padding: var(--PADDINGBODY);
+}
+
+img {
+    margin: 1em;
+}
+
+.figure {
+    display: flex;
+    margin-right: 20rem;
+}
+
+.login1 {
+    display: flex;
+}
+
+.login2 {
+    display: flex;
+}
+
+.header-border1 {
+    padding: 0.7em;
+}
+
+.header-border2 {
+    border: 1px var(--BORDERCOLOR) solid;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 0.4em;
+}
+
+.only-login {
+    color: white;
+    background-color: #d37f00;
+}
+
+.header {
+    display: flex;
+}
+
+.main-header {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-safety {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.TRAIN {
+    display: block;
+    position: fixed;
+    right: 100px;
+    margin: 0;
+}
+
+
+.h1 {
+    font-size: 2.5rem;
+}
+
+.safety {
+    color: greenyellow;
+}
+.security{
+    color: orange;
+}
+.punctuality {
+    color: darkblue;
+}
+
+.book-ticket {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+}
+.BOOK {
+    display: flex;
+    justify-content: space-around;
+    border: 1px var(--BORDERCOLOR) solid;
+    border-radius: 3px;
+    padding: 0.4em;
+    color: white;
+    background-color: rgb(0, 62, 162);
+}
+.BOOKPNG {
+    margin: 0;
+    width: 18%;
+    height: auto;
+}
+.CHARTPNG {
+    margin: 0;
+    width: 15%;
+    height: auto;
+}
+
+.PNR {
+    display: flex;
+    justify-content: space-around;
+    border: 1px var(--BORDERCOLOR) solid;
+    border-radius: 3px;
+    padding: 0.4em;
+}
+
+.banglore {
+    display: inline-flex;
+    border: 1px var(--BORDERCOLOR) solid;
+    border-radius: 4px;
+    height: 85px;
+    width: 100vh;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.bangimg {
+    display: inline-flex;
+    align-items: center;
+}
+.bangimg1 {
+    padding-left: 3rem;
+    width: 95px;
+    height: 55px;
+    position: fixed;
+    left: 310px;
+}
+.bangimg2 {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    left: 362px;
+}
+
+.left-train-div{
+    display: inline-flex;
+}
+.left-train-image {
+    margin-left: 4rem;
+    width: 3rem;
+    height: 3rem;
+}
+.right-train-image {
+    margin-left: 22rem;
+    width: 3rem;
+    height: 3rem;
+}
+.banglore-from2 {
+    display: flex;
+    align-items: center;
+    padding-top: 0.7em;
+}
+.down-vector {
+    width: 10px;
+    height: 6px;
+    margin: 0 5px;
+}
+.second-Banglore {
+    font-size: 160%;
+    font-weight: 900;
+}
+.third-banglore {
+    font-size: 80%;
+}
+
+.date {
+    display: inline-flex;
+}
+.date {
+    border: 1px var(--BORDERCOLOR) solid;
+    border-radius: 4px;
+    height: 85px;
+    width: 100vh;
+    margin-top: 1rem;
+    margin-left: 1.1rem;
+}
+.date1 {
+    margin-left: 7.8rem;
+}
+
+.calender {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.calenderbox {
+    height: 30px;
+    width: 35px;
+    position: fixed;
+    left: 80px;
+}
+.calenderheading {
+    height: 10px;
+    width: 35px;
+    position: fixed;
+    left: 80px;
+    top: 470px;
+}
+.calenderdate {
+    height: 15px;
+    width: 25px;
+    position: fixed;
+    left: 85px;
+    top: 482px;
+}
+
+
+.second-date {
+    font-size: 140%;
+    font-weight: 900;
+}
+.right-train-image-middle {
+    margin-left: 7rem;
+    width: 3rem;
+    height: 3rem;
+}
+.right-train-image-date {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6rem;
+}
+.right-train-image-date1 {
+    width: 38px;
+    height: 38px;
+}
+.right-train-image-date2 {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+}
+
+.right-train-image-dabba {
+    display: inline-flex;
+    padding: 6rem;
+}
+.right-train-image-dabba1 {
+    height: 12px;
+    width: 12px;
+
+    position: fixed;
+    bottom: 184px;
+    left: 560px;
+}
+.right-train-image-dabba3 {
+    height: 28px;
+    width: 28px;
+
+    position: fixed;
+    bottom: 168px;
+    left: 544px;
+}
+
+.footer {
+    margin-left: 1rem;
+}
+
+.footer-div {
+    background-color: rgb(143, 200, 58);
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    width: 700px;
+    bottom: 60px;
+}
+.footer-p {
+    color: white;
+    padding: 0.75rem;
+}
+
+
