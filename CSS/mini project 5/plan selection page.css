@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Federant&family=M+PLUS+Rounded+1c&family=Macondo&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playwrite+VN+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* ,*::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 4rem;
+    background-color: lavender;
+}
+
+.universal {
+    width: 25rem;
+    height: 35rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px grey;
+}
+
+.commonplan {
+    background-color: white;
+    color: rgb(0, 0, 63);
+}
+
+.basicplan {
+    background-color: rgb(0, 0, 63);
+    color: aliceblue;
+}
+
+.commontext{
+    margin: 4rem;
+    font-family: "nunito", cursive;
+}
+
+.subcommon {
+    border-radius: 50px;
+    padding: 0.7rem;
+    margin-top: 2.5rem;
+    /* position: fixed;
+    bottom: 130px; */
+}
+.subscribe {
+    color: aliceblue;
+    background-color: rgb(0, 0, 63);
+}
+.subscribe-middle {
+    color: rgb(0, 0, 63);
+    background-color: aliceblue;
+}
+
+.heading {
+    font-weight: 800;
+    font-size: 3rem;
+}
+.headingsub {
+    font-size: 2rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+.realimg {
+    /* padding-right: 10px; */
+    height: 30px;
+    width: 30px;
+    margin-right: 9px;
+}
+
+.dollar {
+    padding: 1rem 0;
+}
